@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.horizontalLayout_3.addWidget(self.label_7)
         self.spinBox_2 = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBox_2.setMaximum(23)
+        self.spinBox_2.setMaximum(24)
         self.spinBox_2.setObjectName("spinBox_2")
         self.horizontalLayout_3.addWidget(self.spinBox_2)
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
@@ -90,7 +90,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "FDA-510(k)"))
         self.label.setText(_translate("MainWindow", "Applicant Name"))
-        self.label_2.setText(_translate("MainWindow", "매"))
+        #self.label_2.setText(_translate("MainWindow", "매"))
         self.label_3.setText(_translate("MainWindow", "초마다 실행"))
         self.label_4.setText(_translate("MainWindow", "일일 데이터"))
         self.label_7.setText(_translate("MainWindow", "매일"))
