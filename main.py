@@ -18,8 +18,17 @@ import os
 import schedule as sch
 import time
 
-tg_token = '7513171527:AAHZfz6YjRnjXw7-1A_X_6zJ8ow82QjerWw'
-chat_id = -1002237101826
+
+if not os.path.isdir('./data'):
+    os.mkdir('./data')
+if not os.path.isfile('./data/telegramData.dat'):
+    sys.exit(1)
+
+with open('./data/telegramData.dat', 'r') as f:
+    tg_token = f.readline().strip()
+    chat_id = int(f.readline().strip())
+
+
 bot = telegram.Bot(token=tg_token)
 
 def sendMessageInMarkdown(msg):
@@ -35,8 +44,7 @@ class MainWindow(QMainWindow, ui):
         self.macroStatus = False
         self.schTh = None
 
-        if not os.path.isdir('./data'):
-            os.mkdir('./data')
+        
         self.loadParameters()
 
         self.pushButton.clicked.connect(self.macro)
